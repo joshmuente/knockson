@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.4.0](https://www.github.com/joshmuente/knockson/compare/v0.3.1...v0.4.0) (2021-09-13)
+
+
+### Features
+
+* add svg demo to readme ([088b8e5](https://www.github.com/joshmuente/knockson/commit/088b8e5d1573b35da2de1ddde3aefd52c0e97880))
+* add visual feedback ([#12](https://www.github.com/joshmuente/knockson/issues/12)) ([b9ade0c](https://www.github.com/joshmuente/knockson/commit/b9ade0cdbc74f22f2372d8a6ee2d756bcfcda23e))
+* update readme ([d6204f5](https://www.github.com/joshmuente/knockson/commit/d6204f590854657cac763192969033e110726b90))
+
 ### [0.3.1](https://www.github.com/joshmuente/knockson/compare/v0.3.0...v0.3.1) (2021-09-13)
 
 
