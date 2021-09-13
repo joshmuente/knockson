@@ -102,6 +102,7 @@ version = "0.3.0"
 dependencies = [
  "clap",
  "exitcode",
+ "loading",
 ]
 
 [[package]]
@@ -115,6 +116,12 @@ name = "libc"
 version = "0.2.101"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "3cb00336871be5ed2c8ed44b60ae9959dc5b9f08539422ed43f09e34ecaeba21"
+
+[[package]]
+name = "loading"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d0faeaa71bf6fcdc4e838cc166d95fdc9ebe3a57ff1368e280615606066326b4"
 
 [[package]]
 name = "os_str_bytes"
