@@ -24,3 +24,20 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
+
+  release-aur:
+    needs: release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get release
+        id: get_release
+        uses: bruceadams/get-release@v1.2.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - name: Release AUR
+        uses: actions/checkout@master
+        env:
+           ${{ steps.get_release.outputs }}
+        run: python ci/generate-pkgbuild.py
+
+    
