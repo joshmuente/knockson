@@ -1,0 +1,8 @@
+[package]
+name = "knockson"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+clap = "3.0.0-beta.4"
+exitcode = "1.1.2"
