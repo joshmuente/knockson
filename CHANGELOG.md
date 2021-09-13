@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.3.1](https://www.github.com/joshmuente/knockson/compare/v0.3.0...v0.3.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* add commitlint workflow ([967cefc](https://www.github.com/joshmuente/knockson/commit/967cefc629ba528c8ece4afba1d6aa523bf9b37f))
+
 ## [0.3.0](https://www.github.com/joshmuente/knockson/compare/v0.2.0...v0.3.0) (2021-09-13)
 
 
