@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.1](https://www.github.com/joshmuente/knockson/compare/v0.6.0...v0.6.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* trigger release ([1deb149](https://www.github.com/joshmuente/knockson/commit/1deb14964f2afb545faf8a753d64622efd21ef9e))
+
 ## [0.6.0](https://www.github.com/joshmuente/knockson/compare/v0.5.0...v0.6.0) (2021-09-13)
 
 
