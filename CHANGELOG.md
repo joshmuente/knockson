@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://www.github.com/joshmuente/knockson/compare/v0.1.0...v0.2.0) (2021-09-13)
+
+
+### Features
+
+* create README.md ([#3](https://www.github.com/joshmuente/knockson/issues/3)) ([0161612](https://www.github.com/joshmuente/knockson/commit/01616129c6bbe5bf86d30a349b3325d55f0e07b6))
+
 ## 0.1.0 (2021-09-13)
 
 
