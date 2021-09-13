@@ -6,7 +6,6 @@ use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
 use std::{thread, time};
-use clap::crate_version;
 
 #[derive(Clap)]
 #[clap(version = crate_version!(), author = "Josh M. <https://github.com/joshmuente>")]
