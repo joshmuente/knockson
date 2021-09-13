@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.3](https://www.github.com/joshmuente/knockson/compare/v0.6.2...v0.6.3) (2021-09-13)
+
+
+### Bug Fixes
+
+* wrong version in help command ([362d6b1](https://www.github.com/joshmuente/knockson/commit/362d6b1c21215bfddb3160eeb2839db50f6be80f))
+
 ### [0.6.2](https://www.github.com/joshmuente/knockson/compare/v0.6.1...v0.6.2) (2021-09-13)
 
 
