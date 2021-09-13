@@ -34,10 +34,11 @@ jobs:
         uses: bruceadams/get-release@v1.2.3
         env:
           GITHUB_TOKEN: ${{ github.token }}
+      - name: checkout
+        uses: actions/checkout@v2
       - name: Release AUR
-        uses: actions/checkout@master
         env:
-           ${{ steps.get_release.outputs }}
+          ${{ steps.get_release.outputs }}
         run: python ci/generate-pkgbuild.py
 
     
