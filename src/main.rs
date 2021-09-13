@@ -1,10 +1,10 @@
 use clap::{AppSettings, Clap};
+use exitcode;
 use std::net::TcpStream;
-use std::thread;
+use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
-use std::sync::mpsc;
-use exitcode;
+use std::thread;
 
 #[derive(Clap)]
 #[clap(version = "1.0", author = "Josh M. <https://github.com/joshmuente>")]
@@ -17,7 +17,7 @@ struct Opts {
     #[clap(short, long, takes_value = true, default_value = "65535")]
     to_port: usize,
     #[clap(short, long, takes_value = true, default_value = "10")]
-    amount_thread: usize
+    amount_thread: usize,
 }
 
 pub struct ThreadPool {
@@ -112,12 +112,10 @@ fn main() {
 
     let pool = ThreadPool::new(opts.amount_thread);
 
-    for i in opts.from_port..opts.to_port+1 {
+    for i in opts.from_port..opts.to_port + 1 {
         let x = i.clone();
         let host = opts.host.clone();
-        pool.execute(move || {
-            check_port(host, x as i32)
-        });
+        pool.execute(move || check_port(host, x as i32));
     }
 
     drop(pool);
@@ -131,5 +129,3 @@ fn check_port(host: String, port: i32) {
         println!("{} open", port);
     }
 }
-
-
