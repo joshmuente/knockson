@@ -1,5 +1,4 @@
 use clap::{AppSettings, Clap};
-use exitcode;
 use std::net::TcpStream;
 use std::sync::mpsc;
 use std::sync::Arc;
@@ -105,17 +104,16 @@ fn main() {
         std::process::exit(exitcode::USAGE);
     }
 
-    if opts.amount_thread <= 0 {
-        println!("thread amount must be greater 1");
+    if opts.amount_thread == 0 {
+        println!("thread amount must be greater 0");
         std::process::exit(exitcode::USAGE);
     }
 
     let pool = ThreadPool::new(opts.amount_thread);
 
     for i in opts.from_port..opts.to_port + 1 {
-        let x = i.clone();
         let host = opts.host.clone();
-        pool.execute(move || check_port(host, x as i32));
+        pool.execute(move || check_port(host, i as i32));
     }
 
     drop(pool);
