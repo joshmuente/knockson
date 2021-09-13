@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://www.github.com/joshmuente/knockson/compare/v0.4.1...v0.5.0) (2021-09-13)
+
+
+### Features
+
+* change release compression file type ([43e827c](https://www.github.com/joshmuente/knockson/commit/43e827cf37152fb50d97a4a0869f286b3d13c37f))
+
 ### [0.4.1](https://www.github.com/joshmuente/knockson/compare/v0.4.0...v0.4.1) (2021-09-13)
 
 
