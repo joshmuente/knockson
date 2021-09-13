@@ -1,9 +1,10 @@
 use clap::{AppSettings, Clap};
+use loading::Loading;
 use std::net::TcpStream;
 use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
-use std::thread;
+use std::{thread, time};
 
 #[derive(Clap)]
 #[clap(version = "1.0", author = "Josh M. <https://github.com/joshmuente>")]
@@ -34,11 +35,8 @@ enum Message {
 impl ThreadPool {
     pub fn new(size: usize) -> ThreadPool {
         assert!(size > 0);
-
         let (sender, receiver) = mpsc::channel();
-
         let receiver = Arc::new(Mutex::new(receiver));
-
         let mut workers = Vec::with_capacity(size);
 
         for _id in 0..size {
@@ -53,7 +51,6 @@ impl ThreadPool {
         F: FnOnce() + Send + 'static,
     {
         let job = Box::new(f);
-
         self.sender.send(Message::NewJob(job)).unwrap();
     }
 }
@@ -109,21 +106,27 @@ fn main() {
         std::process::exit(exitcode::USAGE);
     }
 
+    let mut loader = Loading::new();
+    loader.start();
     let pool = ThreadPool::new(opts.amount_thread);
 
     for i in opts.from_port..opts.to_port + 1 {
         let host = opts.host.clone();
-        pool.execute(move || check_port(host, i as i32));
+        let loader = loader.clone();
+        pool.execute(move || check_port(host, i as i32, loader));
     }
 
     drop(pool);
-
+    loader.info(format!("Finished scanning {} ports.", { opts.to_port }));
+    loader.end();
+    thread::sleep(time::Duration::from_millis(10));
     std::process::exit(exitcode::OK);
 }
 
-fn check_port(host: String, port: i32) {
+fn check_port(host: String, port: i32, loader: Loading) {
     let stream = TcpStream::connect(format!("{}:{}", host, port));
     if stream.is_ok() {
-        println!("{} open", port);
+        loader.success(format!("Port {} is open", port));
     }
+    loader.text(format!("checking port {}", port));
 }
