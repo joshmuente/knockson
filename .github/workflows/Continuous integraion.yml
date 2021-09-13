@@ -4,11 +4,13 @@ name: Continuous integration
 
 jobs:
   commitlint:
-    name: commitlint
+    name: Lint Commit Messages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        with:
+          fetch-depth: 0
+      - uses: wagoid/commitlint-github-action@v4
 
   check:
     name: Check

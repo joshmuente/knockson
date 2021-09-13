@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://www.github.com/joshmuente/knockson/compare/v0.2.0...v0.3.0) (2021-09-13)
+
+
+### Features
+
+* create LICENSE ([#5](https://www.github.com/joshmuente/knockson/issues/5)) ([688a093](https://www.github.com/joshmuente/knockson/commit/688a093b0bedf82b0041355ed7a47c40cc4babbe))
+
 ## [0.2.0](https://www.github.com/joshmuente/knockson/compare/v0.1.0...v0.2.0) (2021-09-13)
 
 
