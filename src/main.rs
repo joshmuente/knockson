@@ -117,7 +117,7 @@ fn main() {
     }
 
     drop(pool);
-    loader.info(format!("Finished scanning {} ports.", { opts.to_port }));
+    loader.info(format!("Finished scanning {} ports.", { opts.to_port - opts.from_port+1 }));
     loader.end();
     thread::sleep(time::Duration::from_millis(10));
     std::process::exit(exitcode::OK);
