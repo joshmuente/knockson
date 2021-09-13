@@ -1,3 +1,4 @@
+use clap::crate_version;
 use clap::{AppSettings, Clap};
 use loading::Loading;
 use std::net::TcpStream;
