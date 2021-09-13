@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://www.github.com/joshmuente/knockson/compare/v0.5.0...v0.6.0) (2021-09-13)
+
+
+### Features
+
+* add dummy script for AUR workflow ([96f661b](https://www.github.com/joshmuente/knockson/commit/96f661b3f1ccb0e7eb35c201b688a79b321a36eb))
+
 ## [0.5.0](https://www.github.com/joshmuente/knockson/compare/v0.4.1...v0.5.0) (2021-09-13)
 
 
