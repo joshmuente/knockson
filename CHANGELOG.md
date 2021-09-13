@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.6.2](https://www.github.com/joshmuente/knockson/compare/v0.6.1...v0.6.2) (2021-09-13)
+
+
+### Bug Fixes
+
+* workflow wrong file path ([7563e48](https://www.github.com/joshmuente/knockson/commit/7563e487d5338d11187eb2ef4e2bae1dafe39a9c))
+
 ### [0.6.1](https://www.github.com/joshmuente/knockson/compare/v0.6.0...v0.6.1) (2021-09-13)
 
 
