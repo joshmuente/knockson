@@ -5,9 +5,10 @@ use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
 use std::{thread, time};
+use clap::crate_version;
 
 #[derive(Clap)]
-#[clap(version = "1.0", author = "Josh M. <https://github.com/joshmuente>")]
+#[clap(version = crate_version!(), author = "Josh M. <https://github.com/joshmuente>")]
 #[clap(setting = AppSettings::ColoredHelp)]
 struct Opts {
     #[clap(short, long, takes_value = true, default_value = "127.0.0.1")]
@@ -117,7 +118,9 @@ fn main() {
     }
 
     drop(pool);
-    loader.info(format!("Finished scanning {} ports.", { opts.to_port - opts.from_port+1 }));
+    loader.info(format!("Finished scanning {} ports.", {
+        opts.to_port - opts.from_port + 1
+    }));
     loader.end();
     thread::sleep(time::Duration::from_millis(10));
     std::process::exit(exitcode::OK);
