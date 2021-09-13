@@ -1,6 +1,8 @@
 # knockson
 simple multi-threaded port scanner written in rust
 
+[![asciicast](https://asciinema.org/a/6Hif1DUyPORuNjgTe87b17hCh.svg)](https://asciinema.org/a/6Hif1DUyPORuNjgTe87b17hCh)
+
 # Usage
 ```USAGE:
     knockson [OPTIONS]
