@@ -39,6 +39,6 @@ jobs:
       - name: Publish AUR
         env:
           ${{ steps.get_release.outputs }}
-        run: python ci/generate-pkgbuild.py
+        run: python ci/github-actions/generate-pkgbuild.py
 
     
