@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.4.1](https://www.github.com/joshmuente/knockson/compare/v0.4.0...v0.4.1) (2021-09-13)
+
+
+### Bug Fixes
+
+* display wrong info about scanned ports ([53efb0c](https://www.github.com/joshmuente/knockson/commit/53efb0cec286355d28cae3833d4555ade0cbaa53))
+
 ## [0.4.0](https://www.github.com/joshmuente/knockson/compare/v0.3.1...v0.4.0) (2021-09-13)
 
 
