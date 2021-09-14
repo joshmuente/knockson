@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.7.1](https://www.github.com/joshmuente/knockson/compare/v0.7.0...v0.7.1) (2021-09-14)
+
+
+### Bug Fixes
+
+* aur deploy workflow wrong url ([a4c0253](https://www.github.com/joshmuente/knockson/commit/a4c0253a84f82d327bff238b7f30030ee3491dba))
+
 ## [0.7.0](https://www.github.com/joshmuente/knockson/compare/v0.6.3...v0.7.0) (2021-09-14)
 
 
