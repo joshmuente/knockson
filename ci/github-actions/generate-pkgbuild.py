@@ -7,7 +7,7 @@ import sys
 try:
   tag = os.environ.get("tag_name")
   raw_version = tag.replace('v', '')
-  sha265sum_url = f"https://github.com/joshmuente/knockson/releases/download/v{tag}/knockson_v{tag}_x86_64-unknown-linux-musl.tar.xz.sha256sum"
+  sha265sum_url = f"https://github.com/joshmuente/knockson/releases/download/{tag}/knockson_{tag}_x86_64-unknown-linux-musl.tar.xz.sha256sum"
   sha265sum = requests.get(sha265sum_url).content.decode("utf-8")
 
   template = """#Maintainer: Josh Münte
