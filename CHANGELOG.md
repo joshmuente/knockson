@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://www.github.com/joshmuente/knockson/compare/v0.6.3...v0.7.0) (2021-09-14)
+
+
+### Features
+
+* add workflow to publish AUR package ([bdefdc6](https://www.github.com/joshmuente/knockson/commit/bdefdc62ff04504610574efe473dbef4816a973f))
+
 ### [0.6.3](https://www.github.com/joshmuente/knockson/compare/v0.6.2...v0.6.3) (2021-09-13)
 
 
