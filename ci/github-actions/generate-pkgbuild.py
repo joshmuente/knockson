@@ -1,13 +1,20 @@
 #!/usr/bin/env python3
 
 import os
+import requests
+import sys
 
-template = """
-#Maintainer: Josh Münte
+try:
+  tag = os.environ.get("tag_name")
+  raw_version = tag.replace('v', '')
+  sha265sum_url = f"https://github.com/joshmuente/knockson/releases/download/v{tag}/knockson_v{tag}_x86_64-unknown-linux-musl.tar.xz.sha256sum"
+  sha265sum = requests.get(sha265sum_url).content.decode("utf-8")
 
+  template = """#Maintainer: Josh Münte
+#Auto generated. Do not edit.
 _pkgname='knockson'
 pkgname="${_pkgname}-bin"
-pkgver=0.5.0
+pkgver="""+ raw_version +"""
 pkgrel=1
 pkgdesc='simple multi-threaded port scanner written in rust'
 arch=('x86_64')
@@ -18,12 +25,18 @@ depends=()
 provides=("${_pkgname}")
 conflicts=("${_pkgname}")
 source=("${_url_source}/releases/download/v${pkgver}/${_pkgname}_v${pkgver}_${arch}-unknown-linux-musl.tar.xz")
-sha256sums=('165f65f6943fa5280fcecde2390f1d8f8bea6233458ea2548831b49548ddb0d7')
+sha256sums=('"""+ sha265sum +"""')
 
 package () {
   install -Dm 775 "${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
-}
-"""
+}"""
 
-print(template)
-print(os.environ)
+  with open("PKGBUILD", "w") as text_file:
+      text_file.write(template)
+
+  print("PKGBUILD generated")
+  sys.exit(os.EX_OK)
+except Exception as e:
+  print("PKGBUILD Error:")
+  print(e)
+  sys.exit(os.EX_USAGE)

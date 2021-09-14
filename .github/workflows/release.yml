@@ -36,9 +36,17 @@ jobs:
           GITHUB_TOKEN: ${{ github.token }}
       - name: checkout
         uses: actions/checkout@v2
-      - name: Publish AUR
+      - name: Generate PKGBUILD
         env:
           ${{ steps.get_release.outputs }}
         run: python ci/github-actions/generate-pkgbuild.py
-
-    
+      - name: Publish AUR package
+        uses: KSXGitHub/github-actions-deploy-aur@v2.2.5
+        with:
+          pkgname: knockson-bin
+          pkgbuild: ./PKGBUILD
+          commit_username: ${{ secrets.AUR_USERNAME }}
+          commit_email: ${{ secrets.AUR_EMAIL }}
+          ssh_private_key: ${{ secrets.AUR_SSH_PRIVATE_KEY }}
+          commit_message: Update AUR package
+          allow_empty_commits: false
