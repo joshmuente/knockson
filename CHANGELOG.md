@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.8.1](https://www.github.com/joshmuente/knockson/compare/v0.8.0...v0.8.1) (2021-09-15)
+
+
+### Bug Fixes
+
+* program exit before terminal output ([3b3bef5](https://www.github.com/joshmuente/knockson/commit/3b3bef512bd2ec3acaf6f143cda7d9fde78b2e98))
+
 ## [0.8.0](https://www.github.com/joshmuente/knockson/compare/v0.7.1...v0.8.0) (2021-09-15)
 
 
