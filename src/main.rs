@@ -122,7 +122,7 @@ fn main() {
         opts.to_port - opts.from_port + 1
     }));
     loader.end();
-    thread::sleep(time::Duration::from_millis(10));
+    thread::sleep(time::Duration::from_millis(200));
     std::process::exit(exitcode::OK);
 }
 
