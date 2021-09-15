@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://www.github.com/joshmuente/knockson/compare/v0.7.1...v0.8.0) (2021-09-15)
+
+
+### Features
+
+* update readme ([f0cbead](https://www.github.com/joshmuente/knockson/commit/f0cbeadb41df578c244ab0f8e22a09d1567a33e2))
+
 ### [0.7.1](https://www.github.com/joshmuente/knockson/compare/v0.7.0...v0.7.1) (2021-09-14)
 
 
