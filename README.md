@@ -3,6 +3,15 @@ simple multi-threaded port scanner written in rust
 
 ![Example](./docs/knockson.svg)
 
+# Install
+## Using AUR
+https://aur.archlinux.org/packages/knockson-bin/
+
+`yay -Syu knockson-bin`
+
+## Manual
+Builds can be found here https://github.com/joshmuente/knockson/releases/
+
 # Usage
 ```USAGE:
     knockson [OPTIONS]
