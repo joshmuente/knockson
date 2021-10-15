@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://www.github.com/joshmuente/knockson/compare/v0.8.1...v0.9.0) (2021-10-15)
+
+
+### Features
+
+* flush terminal before exit ([b482a88](https://www.github.com/joshmuente/knockson/commit/b482a8896c47c42a1b776b062d6fc919ec72b367))
+
 ### [0.8.1](https://www.github.com/joshmuente/knockson/compare/v0.8.0...v0.8.1) (2021-09-15)
 
 
