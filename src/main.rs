@@ -5,7 +5,8 @@ use std::net::TcpStream;
 use std::sync::mpsc;
 use std::sync::Arc;
 use std::sync::Mutex;
-use std::{thread, time};
+use std::{thread};
+use std::io::{self, Write};
 
 #[derive(Clap)]
 #[clap(version = crate_version!(), author = "Josh M. <https://github.com/joshmuente>")]
@@ -122,7 +123,7 @@ fn main() {
         opts.to_port - opts.from_port + 1
     }));
     loader.end();
-    thread::sleep(time::Duration::from_millis(200));
+    io::stdout().flush().unwrap();
     std::process::exit(exitcode::OK);
 }
 
